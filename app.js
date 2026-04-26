@@ -105,11 +105,13 @@ function renderRows() {
     }
 
     const indexes = document.createElement("td");
-    indexes.className = "badges";
-    indexes.append(
+    const indexBadges = document.createElement("div");
+    indexBadges.className = "badge-list";
+    indexBadges.append(
       badge("Scopus", journal.indexes?.scopus ? "indexed" : "missing"),
       badge("Web of Science", journal.indexes?.web_of_science ? "indexed" : "missing"),
     );
+    indexes.append(indexBadges);
 
     const issn = document.createElement("td");
     issn.innerHTML = [
@@ -124,10 +126,12 @@ function renderRows() {
     quartile.textContent = journal.quartile || "Unranked";
 
     const subjects = document.createElement("td");
-    subjects.className = "subjects";
+    const subjectBadges = document.createElement("div");
+    subjectBadges.className = "badge-list";
     for (const subject of journal.subjects || []) {
-      subjects.append(badge(subject));
+      subjectBadges.append(badge(subject));
     }
+    subjects.append(subjectBadges);
 
     const updated = document.createElement("td");
     updated.textContent = formatDate(journal.updated_at);

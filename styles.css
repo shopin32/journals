@@ -117,8 +117,38 @@ select:focus {
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
   min-width: 940px;
+}
+
+.col-journal {
+  width: 28%;
+}
+
+.col-indexes {
+  width: 15%;
+}
+
+.col-issn {
+  width: 13%;
+}
+
+.col-price {
+  width: 9%;
+}
+
+.col-quartile {
+  width: 8%;
+}
+
+.col-subjects {
+  width: 18%;
+}
+
+.col-updated {
+  width: 9%;
 }
 
 th,
@@ -127,6 +157,7 @@ td {
   border-bottom: 1px solid var(--border);
   text-align: left;
   vertical-align: top;
+  overflow-wrap: anywhere;
 }
 
 th {
@@ -161,10 +192,10 @@ a:hover {
   font-size: 0.86rem;
 }
 
-.badges,
-.subjects {
+.badge-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 6px;
 }
 

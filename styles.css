@@ -34,63 +34,77 @@ body {
 }
 
 .brand {
-  min-width: 220px;
+  display: inline-grid;
+  justify-items: end;
+  min-width: 170px;
 }
 
 .header-main {
   display: flex;
-  align-items: flex-end;
-  gap: 24px;
-}
-
-.header-actions {
-  display: flex;
-  align-items: stretch;
-  gap: 12px;
-}
-
-.eyebrow {
-  margin: 0 0 6px;
-  color: var(--accent);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-transform: uppercase;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-size: clamp(1.28rem, 3vw, 1.85rem);
   line-height: 1;
   letter-spacing: 0;
 }
 
-.summary {
-  min-width: 132px;
-  padding: 10px 14px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--accent-soft);
-  color: var(--accent);
+.brand-subtitle {
+  margin: 2px 0 0;
+  color: var(--text);
+  font-size: 0.68rem;
   font-weight: 700;
-  text-align: right;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.summary {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  margin-left: auto;
+  margin-top: 8px;
+  min-height: 24px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 .summary span {
-  display: block;
+  white-space: nowrap;
+}
+
+.summary strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 24px;
+  border-radius: 8px;
+  padding: 1px 9px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .summary span:first-child {
-  font-size: 1.45rem;
   line-height: 1;
 }
 
 .index-links {
   display: flex;
-  align-self: flex-end;
+  align-self: flex-start;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 0;
+  margin-top: 8px;
 }
 
 .index-links a {
@@ -290,7 +304,9 @@ a:hover {
   }
 
   .summary {
-    width: 100%;
+    align-self: auto;
+    margin-left: 0;
+    margin-top: 0;
     text-align: left;
   }
 
@@ -299,13 +315,10 @@ a:hover {
     gap: 10px;
   }
 
-  .header-actions {
-    width: 100%;
-  }
-
   .index-links {
     align-self: auto;
     justify-content: flex-start;
+    margin-top: 0;
   }
 
   main {

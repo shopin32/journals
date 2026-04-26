@@ -1,9 +1,81 @@
 [
   {
-    "title": "Example Journal of Research",
-    "publisher": "Example Publisher",
-    "issn": "1234-5678",
-    "eissn": "2345-6789",
+    "title": "Artnodes",
+    "publisher": "Universitat Oberta de Catalunya",
+    "issn": "",
+    "eissn": "1695-5951",
+    "price": {
+      "type": "free",
+      "value": null,
+      "currency": ""
+    },
+    "indexes": {
+      "scopus": true,
+      "web_of_science": true
+    },
+    "quartile": "Q1",
+    "subjects": [
+      "Art",
+      "Art and Technology",
+      "Digital Culture"
+    ],
+    "url": "https://artnodes.uoc.edu/",
+    "notes": "Diamond open access; DOAJ lists no publication fees.",
+    "updated_at": "2026-04-26"
+  },
+  {
+    "title": "Digital Creativity",
+    "publisher": "Taylor & Francis",
+    "issn": "1462-6268",
+    "eissn": "1744-3806",
+    "price": {
+      "type": "free",
+      "value": null,
+      "currency": ""
+    },
+    "indexes": {
+      "scopus": true,
+      "web_of_science": true
+    },
+    "quartile": "Q1",
+    "subjects": [
+      "Creative Arts",
+      "Design",
+      "Digital Media"
+    ],
+    "url": "https://www.tandfonline.com/journals/ndcr20",
+    "notes": "Hybrid open access; no APC if not publishing open access.",
+    "updated_at": "2026-04-26"
+  },
+  {
+    "title": "Digital Scholarship in the Humanities",
+    "publisher": "Oxford University Press",
+    "issn": "2055-7671",
+    "eissn": "2055-768X",
+    "price": {
+      "type": "free",
+      "value": null,
+      "currency": ""
+    },
+    "indexes": {
+      "scopus": true,
+      "web_of_science": true
+    },
+    "quartile": "Q1",
+    "subjects": [
+      "Digital Humanities",
+      "Humanities",
+      "Linguistics"
+    ],
+    "url": "https://academic.oup.com/dsh",
+    "notes": "Hybrid open access; open access publication requires an OA charge.",
+    "updated_at": "2026-04-26"
+  },
+  {
+    "title": "Journal of Mathematics and the Arts",
+    "publisher": "Taylor & Francis",
+    "issn": "1751-3472",
+    "eissn": "1751-3480",
     "price": {
       "type": "free",
       "value": null,
@@ -15,11 +87,60 @@
     },
     "quartile": "Q2",
     "subjects": [
-      "Computer Science",
-      "Education"
+      "Mathematics",
+      "Visual Arts",
+      "Visual Arts and Performing Arts"
     ],
-    "url": "https://example.org/journal",
-    "notes": "Replace this sample record with your first real journal.",
+    "url": "https://www.tandfonline.com/journals/tmaa20",
+    "notes": "Hybrid open access; no APC if not publishing open access.",
+    "updated_at": "2026-04-26"
+  },
+  {
+    "title": "Leonardo",
+    "publisher": "MIT Press",
+    "issn": "0024-094X",
+    "eissn": "1530-9282",
+    "price": {
+      "type": "free",
+      "value": null,
+      "currency": ""
+    },
+    "indexes": {
+      "scopus": true,
+      "web_of_science": true
+    },
+    "quartile": "Q1",
+    "subjects": [
+      "Art",
+      "Music",
+      "Science and Technology"
+    ],
+    "url": "https://direct.mit.edu/leon",
+    "notes": "Hybrid open access; MIT Press lists a 1800 USD OA conversion fee.",
+    "updated_at": "2026-04-26"
+  },
+  {
+    "title": "Visual Studies",
+    "publisher": "Taylor & Francis",
+    "issn": "1472-586X",
+    "eissn": "1472-5878",
+    "price": {
+      "type": "free",
+      "value": null,
+      "currency": ""
+    },
+    "indexes": {
+      "scopus": true,
+      "web_of_science": true
+    },
+    "quartile": "Q1",
+    "subjects": [
+      "Cultural Studies",
+      "Visual Sociology",
+      "Visual Studies"
+    ],
+    "url": "https://www.tandfonline.com/journals/rvst20",
+    "notes": "Hybrid open access; no APC if not publishing open access.",
     "updated_at": "2026-04-26"
   }
 ]

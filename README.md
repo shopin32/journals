@@ -3,6 +3,9 @@
 A small public tracker for Scopus and Web of Science journals. The site is plain
 static HTML/CSS/JS, so GitHub Pages can publish it without a build step.
 
+The header includes quick links to Scopus Sources and Web of Science Master
+Journal List for manual index checks.
+
 ## Add a Journal
 
 Run the helper from the repository root:

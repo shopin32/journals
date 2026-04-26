@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Example Journal of Research",
+    "publisher": "Example Publisher",
+    "issn": "1234-5678",
+    "eissn": "2345-6789",
+    "price": {
+      "type": "free",
+      "value": null,
+      "currency": ""
+    },
+    "indexes": {
+      "scopus": true,
+      "web_of_science": true
+    },
+    "quartile": "Q2",
+    "subjects": [
+      "Computer Science",
+      "Education"
+    ],
+    "url": "https://example.org/journal",
+    "notes": "Replace this sample record with your first real journal.",
+    "updated_at": "2026-04-26"
+  }
+]

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Journal Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Scopus and Web of Science</p>
+        <h1>Journal Tracker</h1>
+      </div>
+      <div class="summary" aria-live="polite">
+        <span id="journal-count">0</span>
+        <span>journals tracked</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="Journal filters">
+        <label class="search">
+          <span>Search</span>
+          <input id="search" type="search" placeholder="Title, publisher, ISSN, subject">
+        </label>
+
+        <label>
+          <span>Index</span>
+          <select id="index-filter">
+            <option value="all">All indexes</option>
+            <option value="scopus">Scopus</option>
+            <option value="web_of_science">Web of Science</option>
+            <option value="both">Both</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Quartile</span>
+          <select id="quartile-filter">
+            <option value="all">All quartiles</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="table-wrap" aria-label="Tracked journals">
+        <table>
+          <thead>
+            <tr>
+              <th>Journal</th>
+              <th>Indexes</th>
+              <th>ISSN</th>
+              <th>Price</th>
+              <th>Quartile</th>
+              <th>Subjects</th>
+              <th>Updated</th>
+            </tr>
+          </thead>
+          <tbody id="journal-rows"></tbody>
+        </table>
+        <p id="empty-state" class="empty" hidden>No journals match the current filters.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

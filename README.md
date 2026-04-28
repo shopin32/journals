@@ -6,6 +6,8 @@ static HTML/CSS/JS, so GitHub Pages can publish it without a build step.
 The header includes quick links to Scopus Sources and Web of Science Master
 Journal List for manual index checks.
 
+Deployed to [GitHub Page](https://shopin32.github.io/journals/)
+
 ## Categories
 
 Both platforms contain lots of journals, so an important part plays understanding how to filter all of them to find the one

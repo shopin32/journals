@@ -6,77 +6,33 @@ static HTML/CSS/JS, so GitHub Pages can publish it without a build step.
 The header includes quick links to Scopus Sources and Web of Science Master
 Journal List for manual index checks.
 
-## Add a Journal
+## Categories
 
-Run the helper from the repository root:
+Both platforms contain lots of journals, so an important part plays understanding how to filter all of them to find the one
+that suits you. 
 
-```sh
-python3 scripts/add_journal.py \
-  --title "Journal of Example Studies" \
-  --publisher "Example Publisher" \
-  --issn "1234-5678" \
-  --eissn "2345-6789" \
-  --free \
-  --scopus \
-  --web-of-science \
-  --quartile "Q2" \
-  --subject "Computer Science" \
-  --url "https://example.org/journal"
-```
+### Scopus Categoris
 
-Use `--free` for journals with no publication fee. For paid journals, use:
+Scopus categories have a nested structure, so here is an example of categories that might be used:
 
-```sh
-python3 scripts/add_journal.py \
-  --title "Paid Journal Example" \
-  --price 1200 \
-  --currency USD
-```
+* Social Studies
+  - Cultural Studies
+  - Communication
+* Arts and Humanities
+  - Visual Arts and Performing Arts
+  - General Arts and Humanities
+  - Museology
+  - Philosophy
 
-Then commit and tag a release:
+## Web of Science Categories
 
-```sh
-git add data/journals.json
-git commit -m "Add Journal of Example Studies"
-git tag v2026.04.26
-git push origin main --tags
-```
+WoS categories is a flat list, so just select any of those: 
 
-When a tag matching `v*` is pushed, GitHub Actions publishes the site to GitHub
-Pages.
-
-## Optional Interactive Mode
-
-```sh
-python3 scripts/add_journal.py --interactive
-```
-
-## Local Preview
-
-Run a tiny local web server:
-
-```sh
-python3 -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
-
-## Data
-
-Journal records are stored in [data/journals.json](data/journals.json). Each
-record has:
-
-- `title`
-- `publisher`
-- `issn`
-- `eissn`
-- `price.type`
-- `price.value`
-- `price.currency`
-- `indexes.scopus`
-- `indexes.web_of_science`
-- `quartile`
-- `subjects`
-- `url`
-- `notes`
-- `updated_at`
+* HUMANITIES, MULTIDISCIPLINARY
+* PHILOSOPHY
+* FILM, RADIO, TELEVISION
+* HISTORY & PHILOSOPHY OF SCIENCE
+* ART
+* ART & ARCHITECTURE
+* PERFORMING ARTS
+* CULTURAL STUDIES

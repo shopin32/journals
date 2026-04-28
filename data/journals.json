@@ -20,7 +20,7 @@
       "Digital Culture"
     ],
     "url": "https://artnodes.uoc.edu/",
-    "notes": "Diamond open access; DOAJ lists no publication fees.",
+    "email": "artnodes@uoc.edu",
     "updated_at": "2026-04-26"
   },
   {
@@ -44,7 +44,7 @@
       "Digital Media"
     ],
     "url": "https://www.tandfonline.com/journals/ndcr20",
-    "notes": "Hybrid open access; no APC if not publishing open access.",
+    "email": "michael.nitsche@gatech.edu",
     "updated_at": "2026-04-26"
   },
   {
@@ -68,7 +68,7 @@
       "Linguistics"
     ],
     "url": "https://academic.oup.com/dsh",
-    "notes": "Hybrid open access; open access publication requires an OA charge.",
+    "email": "dshjournal@edwardz.be",
     "updated_at": "2026-04-26"
   },
   {
@@ -92,7 +92,7 @@
       "Visual Arts and Performing Arts"
     ],
     "url": "https://www.tandfonline.com/journals/tmaa20",
-    "notes": "Hybrid open access; no APC if not publishing open access.",
+    "email": "jko01@risd.edu",
     "updated_at": "2026-04-26"
   },
   {
@@ -116,7 +116,7 @@
       "Science and Technology"
     ],
     "url": "https://direct.mit.edu/leon",
-    "notes": "Hybrid open access; MIT Press lists a 1800 USD OA conversion fee.",
+    "email": "isast@leonardo.info",
     "updated_at": "2026-04-26"
   },
   {
@@ -140,7 +140,7 @@
       "Visual Studies"
     ],
     "url": "https://www.tandfonline.com/journals/rvst20",
-    "notes": "Hybrid open access; no APC if not publishing open access.",
+    "email": "sabina.andron@unimelb.edu.au",
     "updated_at": "2026-04-26"
   }
 ]

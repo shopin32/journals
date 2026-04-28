@@ -50,8 +50,8 @@ function journalMatchesSearch(journal) {
     journal.issn,
     journal.eissn,
     formatPrice(journal.price),
+    journal.email,
     journal.quartile,
-    journal.notes,
     ...(journal.subjects || []),
   ].map(normalize).join(" ");
   return haystack.includes(state.search);
@@ -97,11 +97,12 @@ function renderRows() {
       title.append(publisher);
     }
 
-    if (journal.notes) {
-      const notes = document.createElement("div");
-      notes.className = "notes";
-      notes.textContent = journal.notes;
-      title.append(notes);
+    if (journal.email) {
+      const contact = document.createElement("a");
+      contact.className = "contact";
+      contact.href = `mailto:${journal.email}`;
+      contact.textContent = `email: ${journal.email}`;
+      title.append(contact);
     }
 
     const indexes = document.createElement("td");

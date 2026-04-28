@@ -59,7 +59,7 @@ h1 {
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   white-space: nowrap;
 }
 
@@ -253,9 +253,14 @@ a:hover {
 }
 
 .publisher,
-.notes {
+.contact {
+  display: block;
   color: var(--muted);
   font-size: 0.86rem;
+}
+
+.contact {
+  font-weight: 650;
 }
 
 .badge-list {

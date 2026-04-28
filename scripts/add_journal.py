@@ -15,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "journals.json"
 ISSN_RE = re.compile(r"^\d{4}-\d{3}[\dXx]$")
+EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 
 
 def parse_args() -> argparse.Namespace:
@@ -37,7 +38,7 @@ def parse_args() -> argparse.Namespace:
         help="Subject area. Repeat for multiple subjects.",
     )
     parser.add_argument("--url", default="", help="Journal URL.")
-    parser.add_argument("--notes", default="", help="Free-form notes.")
+    parser.add_argument("--email", default="", help="Journal contact email.")
     parser.add_argument("--commit", action="store_true", help="Create a git commit after updating data.")
     parser.add_argument("--tag", help="Create a git tag after committing, for example v2026.04.26.")
     return parser.parse_args()
@@ -89,6 +90,13 @@ def normalize_quartile(value: str) -> str:
     return value
 
 
+def validate_email(value: str) -> str:
+    value = value.strip()
+    if value and not EMAIL_RE.match(value):
+        raise ValueError("--email must be a valid email address.")
+    return value
+
+
 def normalize_price(args: argparse.Namespace) -> dict:
     if args.free and args.price is not None:
         raise ValueError("Use either --free or --price, not both.")
@@ -122,7 +130,7 @@ def build_record(args: argparse.Namespace) -> dict:
         subjects = prompt("Subjects, comma-separated", ", ".join(args.subject))
         args.subject = [item.strip() for item in subjects.split(",") if item.strip()]
         args.url = prompt("URL", args.url)
-        args.notes = prompt("Notes", args.notes)
+        args.email = prompt("Email", args.email)
 
     if not args.title:
         raise ValueError("--title is required unless --interactive is used.")
@@ -142,7 +150,7 @@ def build_record(args: argparse.Namespace) -> dict:
         "quartile": normalize_quartile(args.quartile),
         "subjects": subjects,
         "url": args.url.strip(),
-        "notes": args.notes.strip(),
+        "email": validate_email(args.email),
         "updated_at": date.today().isoformat(),
     }
 
